@@ -1,0 +1,35 @@
+<extension>
+    <modules>
+        <module>
+            <id>Alfresco Developer Helper Extensions</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <configurations>
+                <config evaluator="string-compare" condition="DocLibActions">
+                    <actions>
+                        <action id="net.wavell.alf-dev-helper.action.openInNodeBrowser"
+                                icon="node-browser"
+                                type="pagelink"
+                                label="net.wavell.alf-dev-helper.action.openInNodeBrowser.label">
+                                <param name="page">console/admin-console/node-browser#state=panel%3Dview%26nodeRef%3D{node.nodeRef}</param>
+                        </action>
+                    </actions>
+                    <actionGroups>
+                        <actionGroup id="document-browse">
+                            <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
+                        </actionGroup>
+                        <actionGroup id="document-details">
+                            <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
+                        </actionGroup>
+                        <actionGroup id="folder-browse">
+                            <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
+                        </actionGroup>
+                        <actionGroup id="folder-details">
+                            <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
+                        </actionGroup>
+                    </actionGroups>
+                </config>
+            </configurations>
+        </module>
+    </modules>
+</extension>

@@ -18,6 +18,6 @@ if [ ! -f $springloadedfile ]; then
 mvn validate -Psetup
 fi
 
-MAVEN_OPTS="-javaagent:$springloadedfile -noverify -Xms256m -Xmx2G -XX:PermSize=300m" mvn install -Prun  $@
+MAVEN_OPTS="-javaagent:$springloadedfile -noverify -Xms4G -Xmx4G -XX:PermSize=300m" mvn install -Prun  $@
 
 popd > /dev/null
