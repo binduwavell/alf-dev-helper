@@ -1,0 +1,36 @@
+{
+  "generator-alfresco": {
+    "originalGeneratorVersion": "0.9.1",
+    "generatorVersion": "0.9.1",
+    "sdkVersion": "2.1.1",
+    "archetypeVersion": "2.1.1",
+    "projectStructure": "advanced",
+    "projectGroupId": "net.wavell",
+    "projectArtifactId": "alf-dev-helper",
+    "projectVersion": "1.0.0-SNAPSHOT",
+    "projectPackage": "net.wavell",
+    "communityOrEnterprise": "Community",
+    "removeDefaultSourceAmps": true,
+    "removeDefaultSourceSamples": false,
+    "moduleRegistry": [
+      {
+        "groupId": "${project.groupId}",
+        "artifactId": "alf-dev-helper-repo-amp",
+        "version": "${project.version}",
+        "packaging": "amp",
+        "war": "repo",
+        "location": "source",
+        "path": "customizations/alf-dev-helper-repo-amp"
+      },
+      {
+        "groupId": "${project.groupId}",
+        "artifactId": "alf-dev-helper-share-amp",
+        "version": "${project.version}",
+        "packaging": "amp",
+        "war": "share",
+        "location": "source",
+        "path": "customizations/alf-dev-helper-share-amp"
+      }
+    ]
+  }
+}

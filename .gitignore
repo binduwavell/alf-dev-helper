@@ -1,0 +1,13 @@
+.classpath
+.externalToolBuilders
+.idea
+.ipr
+.iml
+.project
+.settings
+/*.log
+/*.log*
+target/
+alf_data_dev/
+exploded/
+overlays/
