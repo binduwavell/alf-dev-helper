@@ -10,6 +10,6 @@ then
   cd ..
 fi
 
-MAVEN_OPTS="-Xms256m -Xmx2G -XX:PermSize=300m" mvn install -Prun  $@
+MAVEN_OPTS="-Xms4G -Xmx4G -XX:PermSize=300m" mvn install -Prun  $@
 
 popd > /dev/null
