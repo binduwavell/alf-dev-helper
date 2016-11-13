@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-  xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <groupId>net.wavell</groupId>
   <artifactId>alf-dev-helper-repo-amp</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <name>Alfresco Developer Helper Repo</name>
-  <packaging>amp</packaging>
   <description>Platform tools for helping developers</description>
+  <packaging>amp</packaging>
+
   <parent>
     <groupId>org.alfresco.maven</groupId>
     <artifactId>customizations</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
+
   <properties>
     <!-- Property overrides are mostly done in parent pom -->
+    <skipNexusStagingDeployMojo>false</skipNexusStagingDeployMojo>
   </properties>
+
   <!-- Following dependencies are needed for compiling Java code in src/main/java;
           <scope>provided</scope> is inherited for each of the following;
           for more info, please refer to alfresco-platform-distribution POM -->
@@ -51,6 +57,4 @@
       </properties>
     </profile>
   </profiles>
-  <groupId>net.wavell</groupId>
-  <version>1.0.0-SNAPSHOT</version>
 </project>

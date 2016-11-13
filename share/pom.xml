@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project 
-  xmlns="http://maven.apache.org/POM/4.0.0" 
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>share</artifactId>
@@ -42,10 +42,10 @@
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <!-- Here is can control the order of overlay of your (WAR, AMP, etc.) dependencies
-                        | NOTE: At least one WAR dependency must be uncompressed first 
-                        | NOTE: In order to have a dependency effectively added to the WAR you need to 
-                        | explicitly mention it in the overlay section. 
-                        | NOTE: First-win resource strategy is used by the WAR plugin 
+                        | NOTE: At least one WAR dependency must be uncompressed first
+                        | NOTE: In order to have a dependency effectively added to the WAR you need to
+                        | explicitly mention it in the overlay section.
+                        | NOTE: First-win resource strategy is used by the WAR plugin
                         -->
           <overlays>
             <!-- The current project customizations -->
