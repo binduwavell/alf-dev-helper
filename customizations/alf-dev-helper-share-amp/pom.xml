@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.wavell</groupId>
   <artifactId>alf-dev-helper-share-amp</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>Alfresco Developer Helper Share</name>
   <description>Share tools for helping developers</description>
   <packaging>amp</packaging>
