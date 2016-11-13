@@ -16,15 +16,25 @@
                     </actions>
                     <actionGroups>
                         <actionGroup id="document-browse">
+                          <action index="760" id="document-change-type" subgroup="70" appendEvaluators="true">
+                            <evaluator>evaluator.doclib.action.DocumentEnableInSmartFolder</evaluator>
+                          </action>
+                            <action index="890" id="document-execute-script" />
                             <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
                         </actionGroup>
                         <actionGroup id="document-details">
+                            <action index="890" id="document-execute-script" />
                             <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
                         </actionGroup>
                         <actionGroup id="folder-browse">
+                          <action index="760" id="document-change-type" subgroup="70" appendEvaluators="true">
+                            <evaluator>evaluator.doclib.action.DocumentEnableInSmartFolder</evaluator>
+                          </action>
+                            <action index="890" id="document-execute-script" />
                             <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
                         </actionGroup>
                         <actionGroup id="folder-details">
+                            <action index="890" id="document-execute-script" />
                             <action index="900" id="net.wavell.alf-dev-helper.action.openInNodeBrowser" />
                         </actionGroup>
                     </actionGroups>

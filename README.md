@@ -2,9 +2,13 @@
 
 This is a small project where I will collect a number of small and I hope useful utilities for developer (and to some extent administering) an Alfresco system.
 
-Currently there is only one feature, which is to add a document library action that allows you to open any node you find via the document library in the node browser.
+Enables the change type document library action when browsing.
 
-![Open in Node Browser Doc Lib Action](https://cloud.githubusercontent.com/assets/115754/20242639/2a39573e-a8f3-11e6-9273-5049ec1c9121.png)
+Enables the execute script document library action when browsing and when on the details screen.
+
+Adds a document library action that can jump directly to the node browser for the current node.
+
+![Open in Node Browser Doc Lib Action](https://cloud.githubusercontent.com/assets/115754/20243553/d2524d00-a91a-11e6-881a-7d6da94a3412.png)
 
 I'm very open to ideas for small and helpful tools. I do not plan to create any big and/or complex customizations in this project.
 
