@@ -5,12 +5,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.alfresco.maven</groupId>
   <artifactId>customizations</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <parent>
     <groupId>net.wavell</groupId>
     <artifactId>alf-dev-helper</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <properties>
     <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
