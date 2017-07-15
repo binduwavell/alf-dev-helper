@@ -26,34 +26,17 @@
     </license>
   </licenses>
 
-  <!--
-       SDK properties have sensible defaults in the SDK parent,
-       but you can override the properties below to use another version.
-       For more available properties see the alfresco-sdk-parent POM.
-       -->
   <properties>
-    <!-- The following are default values for data location, Alfresco Community version, and Records Management Module version.
-             Uncomment if you need to change (Note. current default version for Enterprise edition is 5.0.1)
-          <alfresco.version>5.0.d</alfresco.version><alfresco.rm.version>2.3</alfresco.rm.version><alfresco.data.location>/absolute/path/to/alf_data_dev</alfresco.data.location> -->
-    <!-- This control the root logging level for all apps uncomment and change, defaults to WARN
-            <app.log.root.level>WARN</app.log.root.level>
-        -->
-    <!-- Set the enviroment to use, this controls which properties will be picked in src/test/properties
-             for embedded run, defaults to the 'local' environment. See SDK Parent POM for more info.
-        <env>local</env>
-        -->
-    <!-- The Alfresco Share web application is accessible via this URL -->
     <share.client.url>http://localhost:8080/share</share.client.url>
     <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
   </properties>
-  <!-- Here we realize the connection with the Alfresco selected platform (e.g.version and edition) -->
+
+  <scm>
+    <developerConnection>scm:git:[fetch=]https://github.com/binduwavell/alf-dev-helper.git[push=]git@github.com:binduwavell/alf-dev-helper.git</developerConnection>
+  </scm>
+
   <dependencyManagement>
     <dependencies>
-      <!-- This will import the dependencyManagement for all artifacts in the selected Alfresco plaftorm
-                 (see http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies)
-                 NOTE: You still need to define dependencies in your POM, but you can omit version as it's enforced by this dependencyManagement.
-                 NOTE: It defaults to the latest version this SDK pom has been tested with, but alfresco version can/should be overridden in your project's pom
-             -->
       <dependency>
         <groupId>${alfresco.groupId}</groupId>
         <artifactId>alfresco-platform-distribution</artifactId>
@@ -63,6 +46,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
@@ -73,6 +57,7 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+
   <build>
     <plugins>
       <!-- Compress JavaScript files and store as *-min.js -->
@@ -84,18 +69,18 @@
         <groupId>org.alfresco.maven.plugin</groupId>
         <artifactId>alfresco-maven-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
     </plugins>
   </build>
+
   <profiles>
     <profile>
-      <!-- Invoke your build with -Prun to run the multimodule project and enable rapid dev mode in your IDE.
-                 See 'run' profile in the sub modules pom.xml for further behavioral details.
-             -->
       <id>run</id>
       <properties>
-        <!-- While running in rapid dev mode with -Prun, we don't want amp web resources
-                    to be added to the war, so we can load them directly from the AMP project (see
-                    runner/tomcat/context-*.xml for more details) -->
         <maven.alfresco.includeWebResources>false</maven.alfresco.includeWebResources>
       </properties>
     </profile>
