@@ -17,6 +17,7 @@
   </parent>
 
   <properties>
+    <app.log.root.level>debug</app.log.root.level>
     <!-- Property overrides are mostly done in parent pom -->
     <skipNexusStagingDeployMojo>false</skipNexusStagingDeployMojo>
   </properties>

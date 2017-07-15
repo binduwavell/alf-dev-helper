@@ -18,7 +18,13 @@
 -->
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-  <!-- This is filtered by Maven at build time, so that module name is single sourced. -->
-  <import resource="classpath:alfresco/module/${project.artifactId}/context/bootstrap-context.xml"/>
-  <import resource="classpath:alfresco/module/${project.artifactId}/context/generated/*-context.xml"/>
+  <bean id="${project.artifactId}-BootstrapDeveloperGroup"
+        class="net.wavell.bootstrap.BootstrapDeveloperGroup"
+        parent="module.baseComponent" >
+    <property name="moduleId" value="${project.artifactId}" />
+    <property name="description" value="Creates the ALFRESCO_DEVELOPERS group if necessary." />
+    <property name="sinceVersion" value="1.0" />
+    <property name="appliesFromVersion" value="1.0" />
+    <property name="executeOnceOnly" value="false" />
+  </bean>
 </beans>
