@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>share</artifactId>
   <name>Alfresco Share WAR Aggregator</name>
@@ -10,7 +8,7 @@
   <parent>
     <groupId>net.wavell</groupId>
     <artifactId>alf-dev-helper</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
   <properties>
     <!-- Used in share-config-custom.xml when testing.
@@ -49,14 +47,14 @@
                         -->
           <overlays>
             <!-- The current project customizations -->
-            <overlay/>
+            <overlay />
             <!-- The Share WAR -->
             <overlay>
               <groupId>${alfresco.groupId}</groupId>
               <artifactId>${alfresco.share.artifactId}</artifactId>
               <type>war</type>
               <!-- To allow inclusion of META-INF -->
-              <excludes/>
+              <excludes />
             </overlay>
             <!-- Add / sort your AMPs here -->
             <!-- Uncomment if you are using RM module -->

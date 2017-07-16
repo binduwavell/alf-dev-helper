@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.wavell</groupId>
   <artifactId>alf-dev-helper</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>Alfresco Developer Helper Addon</name>
   <description>Alfresco Addon that adds a few tools that can help developers and to some extent administrators.</description>
   <packaging>pom</packaging>
@@ -33,6 +31,7 @@
 
   <scm>
     <developerConnection>scm:git:[fetch=]https://github.com/binduwavell/alf-dev-helper.git[push=]git@github.com:binduwavell/alf-dev-helper.git</developerConnection>
+    <tag>alf-dev-helper-1.0.1</tag>
   </scm>
 
   <dependencyManagement>
