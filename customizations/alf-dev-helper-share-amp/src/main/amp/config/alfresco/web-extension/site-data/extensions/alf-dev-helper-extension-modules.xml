@@ -4,6 +4,12 @@
             <id>Alfresco Developer Helper Extensions</id>
             <version>1.0</version>
             <auto-deploy>true</auto-deploy>
+            <evaluator type="group.module.evaluator">
+                <params>
+                    <groups>GROUP_ALFRESCO_DEVELOPERS</groups>
+                    <negate>false</negate>
+                </params>
+            </evaluator>
             <configurations>
                 <config evaluator="string-compare" condition="DocLibActions">
                     <actions>
@@ -12,6 +18,7 @@
                                 type="link"
                                 label="net.wavell.alf-dev-helper.action.openInNodeBrowser.label">
                                 <param name="href">/share/page/console/admin-console/node-browser#state=panel%3Dview%26nodeRef%3D{nodeRef}</param>
+                                <evaluator negate="false">net.wavell.alf-dev-helper-share-amp.doclib.action.isAdministrator</evaluator>
                         </action>
                     </actions>
                     <actionGroups>

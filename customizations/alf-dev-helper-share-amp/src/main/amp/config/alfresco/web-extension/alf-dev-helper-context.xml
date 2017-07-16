@@ -23,4 +23,14 @@
       </property>
    </bean>
 
+  <!-- Check if user is an administrator -->
+  <bean id="net.wavell.alf-dev-helper-share-amp.doclib.action.isAdministrator"
+        parent="evaluator.doclib.action.groupMembership">
+    <property name="groups">
+      <list>
+        <value>GROUP_ALFRESCO_ADMINISTRATORS</value>
+      </list>
+    </property>
+  </bean>
+
 </beans>
